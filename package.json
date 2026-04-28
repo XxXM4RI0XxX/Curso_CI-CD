@@ -1,3 +1,14 @@
-"scripts": {
-	"test" : "jest"
-}
+{
+  "name": "api-curso-ci-cd",
+  "version": "1.0.0",
+  "description": "Ta shido",
+  "license": "ISC",
+  "author": "AMD",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
