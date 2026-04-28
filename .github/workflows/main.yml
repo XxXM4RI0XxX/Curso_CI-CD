@@ -15,7 +15,15 @@ jobs:
       - name: Usar NODE JS
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Construir app con node
         run: npm install
+
+      - name: Verificar si app.js existe
+        run: |
+          if [ ! -f "$GITHUB_WORKSPACE/app.js" ]; then
+            echo "No se encontro app.js en la raiz."
+            exit 1
+          fi
+          echo "Se encontro app.js. Continuando con el workflow..."
